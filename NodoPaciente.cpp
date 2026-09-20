@@ -5,8 +5,7 @@ NodoPaciente::NodoPaciente(Paciente* paciente){
     this->siguiente = nullptr;
 }
 
-NodoPaciente::~NodoPaciente(){
-    delete this->paciente;
+NodoPaciente::~NodoPaciente(){ //se limpia en listapacientes limpiar() y ColaPacientes
 }
 
 Paciente* NodoPaciente::getPaciente() {

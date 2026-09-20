@@ -12,6 +12,7 @@ ListaPacientes::~ListaPacientes(){
 void ListaPacientes::limpiar() {
     while (this->inicio != nullptr) {
         NodoPaciente* temp = this->inicio->getSiguiente(); // ponemos q sea el segundo
+        delete this->inicio->getPaciente(); 
         delete this->inicio; // ahora que borramos el inicio queda segundo el temp
         this->inicio = temp; // lo declaramos como inicio -> al terminar el cycle queda solo el puntero nulo
     }
